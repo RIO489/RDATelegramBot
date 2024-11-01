@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bot-veru",
+  "private_key_id": "3b4d2e802582ad739b6d409b5efef42f1abb29ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCrDwVdMS3lDp8G\n4Dt1Yvw5AepTW8yO1lExNWsc1rc5bmwa7R96Icwtv/AaKTv+PX9SR2nuC10+yG2R\nDc/RwhheBDUdhgYVBs+mLUBkNpzPgkMCiqntwrVbE7T8Bc480mNlSJZhoBLQbz1L\n183I2SZHxPr+uim1XDhPe2XnXlqCSbLuQh5f3ssQehBdRGf0TCqRzNIE1SnGccZl\n4zuPm1K7ekimGAw1BePg/V2d1bBZw+dvB2DXOKuXnwXr9gV5BAzRtS+0pg6qAU7u\nF/msfqR3nQwjJHAnsXQoGygGBZzVchVkO0XRb1qPcKVzKcCSY9ndMEG+iJ+UUZ2K\nSsXj2xtTAgMBAAECggEABzx573KUbJxZdDAtKtl6LlaF54dlH0ikePlF6uKsaM2b\na3eD71CLepUV+zDjshew5uBtgl20Xw19Zmk0cZJUWsgIOoVx9sFp1wT2QsN1Vmk+\nHFcGj8w+xP7W7IvyjF2TLPSiMipF/CT0GECJGsKfHTgDLRA0516pun4lB+/i0qBp\nl/685MTSBx7936U0FXmCoh8pzxOHA5F6oo/SfW8IP/SCb/HqRbab/D0wGz0mcDXV\npPQO3xnXPqo7HCVf4yJ8SjHtAzJZpx0DqOyuMz0DTChhX1Q3iAlYwCH+r30uNU11\naIM6z9Npfx/hs99F3/zseR1PYwjxHjJMw7bLyZ/JoQKBgQC8fEsMxREJOuM6O6uN\nvQs94qbd1yW2RZ+k5CfG5xtsbOR3dpH4wfp4WhHIufjn5IUpTJlDA/VEWRxtAWKw\nvTZ8IgfH+gUbuGOKkvdj3UPe7+uwIw/qeTYJFuqb9SFSmOBrn1pC80kvd2IZIOWH\nYfssbyHh1N6eWEYoBKsmTdX6MwKBgQDoVLl71HsFAZZFzDJgNtmTqtUM9avPk7cP\n1y+RP9tW58xOoe9vdWex1OZo1J+Q/D1/0e15Nf7J/sciPbkkC1waTRHtjuNVj2x/\n10GPLHehSq0WplF6mmY7DX0iMg3LKgOR1dn6lojpITG623wWFh2vsE3JLvRr0npa\nCh6VnEl6YQKBgFMM/VCyIJCNlwPYuP2qN6LcFKSZIS/QO8i/E1vMB0ReMskEwMr4\nRfHz1fQ5JZigE6Cf9MQXoWGtVh4dxyuTI8fMgts1qjyNoaa0nTcujrJTyukAegnZ\nwNp+c3+mojkvzWr+exoW8r9sfhgOa7Sckr0AdtB4KGNjB/6oF/W3xDoLAoGBALf/\neZKfefpCAoAusurOJcy0K90Cp9pSk1WBR5PSLeUK2RyhVR5BrikBgqUdV24cxpv3\nZwpq/+l71LvChGEOehf+V6d7VYHKf9RTZwF75xafLKvWdosRwssb6LFvUMtI7+DM\nq8Cw/acceeURtJlNVJ9ykng1rq/B1tJ+VzCHwQ2hAoGAAYNF/OZwO9K+1PXCl0pQ\nGvb7/vM8EggtxpcsTHImg8yLpBbhLVz0AuvvW6tTbHbSArd/kd/Qonplcd8NBJyp\nZgih63wVMi/ApfcpQ+O3GiEpCAzjRdTGROISwU0IJF0tiyutwkpTWa1ImCM0V+XY\n9Z31gZdepC4syurMitvnZ3k=\n-----END PRIVATE KEY-----\n",
+  "client_email": "telegrambotapi@bot-veru.iam.gserviceaccount.com",
+  "client_id": "116287618686775972862",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/telegrambotapi%40bot-veru.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
