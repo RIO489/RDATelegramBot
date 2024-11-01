@@ -37,5 +37,4 @@ build/
 ### Mac OS ###
 .DS_Store
 
-bot-veru-3b4d2e802582.json
 src/main/resources/config.properties
