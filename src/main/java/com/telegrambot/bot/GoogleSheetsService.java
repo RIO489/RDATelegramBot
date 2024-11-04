@@ -21,6 +21,8 @@ import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.Properties;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
 
 public class GoogleSheetsService {
 
@@ -45,7 +47,8 @@ public class GoogleSheetsService {
 
         public static Sheets getSheetsService() throws IOException, GeneralSecurityException {
             if (sheetsService == null) {
-                GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream("bot-veru-3b4d2e802582.json"))
+Logger.getLogger("com.google.api.client").setLevel(Level.ALL);
+                GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream("/home/ubuntu/RDATelegramBot/bot-veru-3b4d2e802582.json"))
                         .createScoped(Collections.singleton(SheetsScopes.SPREADSHEETS));
                 sheetsService = new Sheets.Builder(GoogleNetHttpTransport.newTrustedTransport(), JSON_FACTORY, new HttpCredentialsAdapter(credentials))
                         .setApplicationName(APPLICATION_NAME)

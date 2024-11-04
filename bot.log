@@ -1,0 +1,282 @@
+nohup: ignoring input
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-11-01T21:47:34.564+01:00  INFO 10586 --- [RDATelegramBot] [           main] com.telegrambot.RDATelegramBot           : Starting RDATelegramBot v0.0.1-SNAPSHOT using Java 17.0.12 with PID 10586 (/home/ubuntu/RDATelegramBot/target/RDATelegramBot-0.0.1-SNAPSHOT.jar started by ubuntu in /home/ubuntu/RDATelegramBot)
+2024-11-01T21:47:34.575+01:00  INFO 10586 --- [RDATelegramBot] [           main] com.telegrambot.RDATelegramBot           : No active profile set, falling back to 1 default profile: "default"
+2024-11-01T21:47:37.184+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-01T21:47:37.213+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-01T21:47:37.213+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-11-01T21:47:37.290+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-01T21:47:37.292+01:00  INFO 10586 --- [RDATelegramBot] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2543 ms
+2024-11-01T21:47:39.084+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.t.telegrambots.longpolling.BotSession  : Result when calling deleteWebhook: true
+2024-11-01T21:47:39.126+01:00  INFO 10586 --- [RDATelegramBot] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-01T21:47:39.164+01:00  INFO 10586 --- [RDATelegramBot] [           main] com.telegrambot.RDATelegramBot           : Started RDATelegramBot in 5.587 seconds (process running for 6.74)
+2024-11-01T21:47:59.422+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.39.2 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 775
+
+2024-11-01T21:47:59.422+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.39.2 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2024-11-01T21:47:59.509+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 775 bytes
+2024-11-01T21:47:59.510+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiIsImtpZCI6IjgzZjlmZDE0Yjk2ZTVmMjk2NWQyODdjNDU3NmVjNTE0NjEzMzU1OWQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsImV4cCI6MTczMDQ5NzY3OSwiaWF0IjoxNzMwNDk0MDc5LCJpc3MiOiJ0ZWxlZ3JhbWJvdGFwaUBib3QtdmVydS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMifQ.KPo5ldr3BvUhXTt8eZjES9NPD1bR78MZmApAv1Co5dMhuhZHittLfxCtGoMhp-gngrM9oHxhB_mU7nlrOpdTP2DIG8WVeqsFtcX-LzC1-XI7jMHJfuGdj4fYcfOoxrxFi9jva3kTsAMnHhe-Z9xkVUaeGypcTy3csRBvzPa-0RL1B8BBNFIB5Qpg5O7kZqMXO8O94q5RlC_VwsIw79WQs8PUb5qfdugqdHOqm6E4WciYbf0n5s-JpIbZoqYNKll0rt5fWQMvKMxmA5mZx_9kix5HQ8G7AJDOlVobPGWJWjYI1bIFQ5Q0uiIF3OaouC6IIxiDypR_veXH2Gy4q00MWg
+2024-11-01T21:47:59.535+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Fri, 01 Nov 2024 20:47:59 GMT
+Content-Type: application/json; charset=UTF-8
+
+2024-11-01T21:47:59.542+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 1,083 bytes
+2024-11-01T21:47:59.544+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {"access_token":"ya29.c.c0ASRK0GaRS0HlQFxK0Xy-rFgzq-69n4Ngq2cb7jf5nNHcN91-nReXrGFCETWSSdgdxGfgJUrr4BknMPFJbzhtgCWAM-UUnS80XPI0iw00fBm1FDpgki5VJtp5TbrMmCfaMzJ_Lq5D7hY2rMCFSzIFzm7h4XDzZ97B3wqUjfPNEkivF7JYYqvKL3IaLm7Jogpgtyir8N3D16CakMt5ZEBMo0tYra3GOGLXRXLkZwc_P5UOUUyVp_GN3_7WWvg2gk1k-5PmtU57249icwdCzP-WyJz6oxisUtNG67tVhtLKJFPAhpNcFMM3svj-zoUQ1zTvfEnxp-lxn3-y2gUnyK1-zI9oA5FGGrBsrNgjZqAjzIjBcFWnMoRnGEBHhgT387D36Qp4ISIaY5prRsrZh53Iq9h0bvg_3ovt5qXe5tVvFqXBJcUeSwzUWspU04hm8a5_BwFI5Xme99cz3_0MV3j0I76qtOIquS21qvV7jVX7-Y94w2rRhs-clOMf966vSsz05xYeQywhf9woXMq_rJajooFji2d7cv7QgW-VdyXYI7025oehZhQi7rhk3v1QphOrRjy_Xbcc9hg954U_kkxQR-xy9Z2JBf9ndz61aWWaaWp1R4Io4qppWqI7uSFi7Q2o0z3qfenaphmcMUQ-Ibj1ZiJweO_Om2tktX_qsRBZXpaQwVSuX9zevJ9jJ6Ymdn_yYy765oW1JqrBgQBR_eenaZF2n-QmedexFVRY4b3rvRtp77h15OgO-pO1pp5bFjlxyZl-ROgxaU92ily1eiqfvyYX0ty0MQw2ROi3jnV9UwwczY9mb5Mkc3Bccy4m9vUi2xMbZ-7x3zS1-wkuUlos_nomnnaWsgzm6MSuRIRSFwi7RMc9c5aStuhd5FVBRh5frc4gyMr0R-ZruVqQ1FvmMluFycYa0IuXucVRad0aF9_XRB-o2m4l_j9ols4Yx2k7wyr4rdFMvc3-_15zgSIggb2brkxp7UbFj42plkw_ZQykQ699w74mlVi","expires_in":3599,"token_type":"Bearer"}
+2024-11-01T21:47:59.560+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- REQUEST  --------------
+POST https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED
+Accept-Encoding: gzip
+Authorization: Bearer ya29.c.c0ASRK0GaRS0HlQFxK0Xy-rFgzq-69n4Ngq2cb7jf5nNHcN91-nReXrGFCETWSSdgdxGfgJUrr4BknMPFJbzhtgCWAM-UUnS80XPI0iw00fBm1FDpgki5VJtp5TbrMmCfaMzJ_Lq5D7hY2rMCFSzIFzm7h4XDzZ97B3wqUjfPNEkivF7JYYqvKL3IaLm7Jogpgtyir8N3D16CakMt5ZEBMo0tYra3GOGLXRXLkZwc_P5UOUUyVp_GN3_7WWvg2gk1k-5PmtU57249icwdCzP-WyJz6oxisUtNG67tVhtLKJFPAhpNcFMM3svj-zoUQ1zTvfEnxp-lxn3-y2gUnyK1-zI9oA5FGGrBsrNgjZqAjzIjBcFWnMoRnGEBHhgT387D36Qp4ISIaY5prRsrZh53Iq9h0bvg_3ovt5qXe5tVvFqXBJcUeSwzUWspU04hm8a5_BwFI5Xme99cz3_0MV3j0I76qtOIquS21qvV7jVX7-Y94w2rRhs-clOMf966vSsz05xYeQywhf9woXMq_rJajooFji2d7cv7QgW-VdyXYI7025oehZhQi7rhk3v1QphOrRjy_Xbcc9hg954U_kkxQR-xy9Z2JBf9ndz61aWWaaWp1R4Io4qppWqI7uSFi7Q2o0z3qfenaphmcMUQ-Ibj1ZiJweO_Om2tktX_qsRBZXpaQwVSuX9zevJ9jJ6Ymdn_yYy765oW1JqrBgQBR_eenaZF2n-QmedexFVRY4b3rvRtp77h15OgO-pO1pp5bFjlxyZl-ROgxaU92ily1eiqfvyYX0ty0MQw2ROi3jnV9UwwczY9mb5Mkc3Bccy4m9vUi2xMbZ-7x3zS1-wkuUlos_nomnnaWsgzm6MSuRIRSFwi7RMc9c5aStuhd5FVBRh5frc4gyMr0R-ZruVqQ1FvmMluFycYa0IuXucVRad0aF9_XRB-o2m4l_j9ols4Yx2k7wyr4rdFMvc3-_15zgSIggb2brkxp7UbFj42plkw_ZQykQ699w74mlVi
+User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)
+x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0
+Content-Type: application/json; charset=UTF-8
+Content-Encoding: gzip
+
+2024-11-01T21:47:59.561+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: Bearer ya29.c.c0ASRK0GaRS0HlQFxK0Xy-rFgzq-69n4Ngq2cb7jf5nNHcN91-nReXrGFCETWSSdgdxGfgJUrr4BknMPFJbzhtgCWAM-UUnS80XPI0iw00fBm1FDpgki5VJtp5TbrMmCfaMzJ_Lq5D7hY2rMCFSzIFzm7h4XDzZ97B3wqUjfPNEkivF7JYYqvKL3IaLm7Jogpgtyir8N3D16CakMt5ZEBMo0tYra3GOGLXRXLkZwc_P5UOUUyVp_GN3_7WWvg2gk1k-5PmtU57249icwdCzP-WyJz6oxisUtNG67tVhtLKJFPAhpNcFMM3svj-zoUQ1zTvfEnxp-lxn3-y2gUnyK1-zI9oA5FGGrBsrNgjZqAjzIjBcFWnMoRnGEBHhgT387D36Qp4ISIaY5prRsrZh53Iq9h0bvg_3ovt5qXe5tVvFqXBJcUeSwzUWspU04hm8a5_BwFI5Xme99cz3_0MV3j0I76qtOIquS21qvV7jVX7-Y94w2rRhs-clOMf966vSsz05xYeQywhf9woXMq_rJajooFji2d7cv7QgW-VdyXYI7025oehZhQi7rhk3v1QphOrRjy_Xbcc9hg954U_kkxQR-xy9Z2JBf9ndz61aWWaaWp1R4Io4qppWqI7uSFi7Q2o0z3qfenaphmcMUQ-Ibj1ZiJweO_Om2tktX_qsRBZXpaQwVSuX9zevJ9jJ6Ymdn_yYy765oW1JqrBgQBR_eenaZF2n-QmedexFVRY4b3rvRtp77h15OgO-pO1pp5bFjlxyZl-ROgxaU92ily1eiqfvyYX0ty0MQw2ROi3jnV9UwwczY9mb5Mkc3Bccy4m9vUi2xMbZ-7x3zS1-wkuUlos_nomnnaWsgzm6MSuRIRSFwi7RMc9c5aStuhd5FVBRh5frc4gyMr0R-ZruVqQ1FvmMluFycYa0IuXucVRad0aF9_XRB-o2m4l_j9ols4Yx2k7wyr4rdFMvc3-_15zgSIggb2brkxp7UbFj42plkw_ZQykQ699w74mlVi' -H 'User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)' -H 'x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0' -H 'Content-Type: application/json; charset=UTF-8' -H 'Content-Encoding: gzip' -d '@-' -- 'https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED' << $$$
+2024-11-01T21:47:59.640+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 134 bytes
+2024-11-01T21:47:59.642+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {"values":[["2024-11-01 21:47:59","Львівська РДА","asdadas","+38543242342","asdasd","asdad","5","Щодня","asdasdas"]]}
+2024-11-01T21:48:00.894+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Fri, 01 Nov 2024 20:48:00 GMT
+x-l2-request-path: l2-managed-6
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/json; charset=UTF-8
+
+2024-11-01T21:48:00.899+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 313 bytes
+2024-11-01T21:48:00.899+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {
+  "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+  "tableRange": "'Аркуш1'!A1:I10",
+  "updates": {
+    "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+    "updatedRange": "'Аркуш1'!A11:I11",
+    "updatedRows": 1,
+    "updatedColumns": 9,
+    "updatedCells": 9
+  }
+}
+
+Data added to Google Sheets: [[2024-11-01 21:47:59, Львівська РДА, asdadas, +38543242342, asdasd, asdad, 5, Щодня, asdasdas]]
+2024-11-01T21:48:48.896+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- REQUEST  --------------
+POST https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED
+Accept-Encoding: gzip
+Authorization: Bearer ya29.c.c0ASRK0GaRS0HlQFxK0Xy-rFgzq-69n4Ngq2cb7jf5nNHcN91-nReXrGFCETWSSdgdxGfgJUrr4BknMPFJbzhtgCWAM-UUnS80XPI0iw00fBm1FDpgki5VJtp5TbrMmCfaMzJ_Lq5D7hY2rMCFSzIFzm7h4XDzZ97B3wqUjfPNEkivF7JYYqvKL3IaLm7Jogpgtyir8N3D16CakMt5ZEBMo0tYra3GOGLXRXLkZwc_P5UOUUyVp_GN3_7WWvg2gk1k-5PmtU57249icwdCzP-WyJz6oxisUtNG67tVhtLKJFPAhpNcFMM3svj-zoUQ1zTvfEnxp-lxn3-y2gUnyK1-zI9oA5FGGrBsrNgjZqAjzIjBcFWnMoRnGEBHhgT387D36Qp4ISIaY5prRsrZh53Iq9h0bvg_3ovt5qXe5tVvFqXBJcUeSwzUWspU04hm8a5_BwFI5Xme99cz3_0MV3j0I76qtOIquS21qvV7jVX7-Y94w2rRhs-clOMf966vSsz05xYeQywhf9woXMq_rJajooFji2d7cv7QgW-VdyXYI7025oehZhQi7rhk3v1QphOrRjy_Xbcc9hg954U_kkxQR-xy9Z2JBf9ndz61aWWaaWp1R4Io4qppWqI7uSFi7Q2o0z3qfenaphmcMUQ-Ibj1ZiJweO_Om2tktX_qsRBZXpaQwVSuX9zevJ9jJ6Ymdn_yYy765oW1JqrBgQBR_eenaZF2n-QmedexFVRY4b3rvRtp77h15OgO-pO1pp5bFjlxyZl-ROgxaU92ily1eiqfvyYX0ty0MQw2ROi3jnV9UwwczY9mb5Mkc3Bccy4m9vUi2xMbZ-7x3zS1-wkuUlos_nomnnaWsgzm6MSuRIRSFwi7RMc9c5aStuhd5FVBRh5frc4gyMr0R-ZruVqQ1FvmMluFycYa0IuXucVRad0aF9_XRB-o2m4l_j9ols4Yx2k7wyr4rdFMvc3-_15zgSIggb2brkxp7UbFj42plkw_ZQykQ699w74mlVi
+User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)
+x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0
+Content-Type: application/json; charset=UTF-8
+Content-Encoding: gzip
+
+2024-11-01T21:48:48.897+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: Bearer ya29.c.c0ASRK0GaRS0HlQFxK0Xy-rFgzq-69n4Ngq2cb7jf5nNHcN91-nReXrGFCETWSSdgdxGfgJUrr4BknMPFJbzhtgCWAM-UUnS80XPI0iw00fBm1FDpgki5VJtp5TbrMmCfaMzJ_Lq5D7hY2rMCFSzIFzm7h4XDzZ97B3wqUjfPNEkivF7JYYqvKL3IaLm7Jogpgtyir8N3D16CakMt5ZEBMo0tYra3GOGLXRXLkZwc_P5UOUUyVp_GN3_7WWvg2gk1k-5PmtU57249icwdCzP-WyJz6oxisUtNG67tVhtLKJFPAhpNcFMM3svj-zoUQ1zTvfEnxp-lxn3-y2gUnyK1-zI9oA5FGGrBsrNgjZqAjzIjBcFWnMoRnGEBHhgT387D36Qp4ISIaY5prRsrZh53Iq9h0bvg_3ovt5qXe5tVvFqXBJcUeSwzUWspU04hm8a5_BwFI5Xme99cz3_0MV3j0I76qtOIquS21qvV7jVX7-Y94w2rRhs-clOMf966vSsz05xYeQywhf9woXMq_rJajooFji2d7cv7QgW-VdyXYI7025oehZhQi7rhk3v1QphOrRjy_Xbcc9hg954U_kkxQR-xy9Z2JBf9ndz61aWWaaWp1R4Io4qppWqI7uSFi7Q2o0z3qfenaphmcMUQ-Ibj1ZiJweO_Om2tktX_qsRBZXpaQwVSuX9zevJ9jJ6Ymdn_yYy765oW1JqrBgQBR_eenaZF2n-QmedexFVRY4b3rvRtp77h15OgO-pO1pp5bFjlxyZl-ROgxaU92ily1eiqfvyYX0ty0MQw2ROi3jnV9UwwczY9mb5Mkc3Bccy4m9vUi2xMbZ-7x3zS1-wkuUlos_nomnnaWsgzm6MSuRIRSFwi7RMc9c5aStuhd5FVBRh5frc4gyMr0R-ZruVqQ1FvmMluFycYa0IuXucVRad0aF9_XRB-o2m4l_j9ols4Yx2k7wyr4rdFMvc3-_15zgSIggb2brkxp7UbFj42plkw_ZQykQ699w74mlVi' -H 'User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)' -H 'x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0' -H 'Content-Type: application/json; charset=UTF-8' -H 'Content-Encoding: gzip' -d '@-' -- 'https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED' << $$$
+2024-11-01T21:48:48.938+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 140 bytes
+2024-11-01T21:48:48.939+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {"values":[["2024-11-01 21:48:48","Львівська РДА","asdadas","+38543242342","dasdas","asdadas","5","Щомісяця","asdasd"]]}
+2024-11-01T21:48:49.297+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Fri, 01 Nov 2024 20:48:49 GMT
+x-l2-request-path: l2-managed-6
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/json; charset=UTF-8
+
+2024-11-01T21:48:49.298+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 313 bytes
+2024-11-01T21:48:49.298+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {
+  "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+  "tableRange": "'Аркуш1'!A1:I11",
+  "updates": {
+    "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+    "updatedRange": "'Аркуш1'!A12:I12",
+    "updatedRows": 1,
+    "updatedColumns": 9,
+    "updatedCells": 9
+  }
+}
+
+Data added to Google Sheets: [[2024-11-01 21:48:48, Львівська РДА, asdadas, +38543242342, dasdas, asdadas, 5, Щомісяця, asdasd]]
+2024-11-03T00:26:03.544+01:00 ERROR 10586 --- [RDATelegramBot] [pool-3-thread-1] o.t.telegrambots.longpolling.BotSession  : Error received from Telegram GetUpdates Request, retrying in 694 millis...
+
+org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: null
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:156) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at org.telegram.telegrambots.longpolling.BotSession.lambda$createPollerTask$1(BotSession.java:103) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: 
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:152) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	... 7 common frames omitted
+
+2024-11-03T00:26:04.272+01:00 ERROR 10586 --- [RDATelegramBot] [pool-3-thread-1] o.t.telegrambots.longpolling.BotSession  : Error received from Telegram GetUpdates Request, retrying in 950 millis...
+
+org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: null
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:156) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at org.telegram.telegrambots.longpolling.BotSession.lambda$createPollerTask$1(BotSession.java:103) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: 
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:152) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	... 7 common frames omitted
+
+2024-11-03T00:26:05.249+01:00 ERROR 10586 --- [RDATelegramBot] [pool-3-thread-1] o.t.telegrambots.longpolling.BotSession  : Error received from Telegram GetUpdates Request, retrying in 1399 millis...
+
+org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: null
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:156) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at org.telegram.telegrambots.longpolling.BotSession.lambda$createPollerTask$1(BotSession.java:103) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: 
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:152) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	... 7 common frames omitted
+
+2024-11-03T00:27:46.649+01:00 ERROR 10586 --- [RDATelegramBot] [pool-3-thread-1] o.t.telegrambots.longpolling.BotSession  : Error received from Telegram GetUpdates Request, retrying in 1416 millis...
+
+org.telegram.telegrambots.longpolling.exceptions.TelegramApiErrorResponseException: null
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:156) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at org.telegram.telegrambots.longpolling.BotSession.lambda$createPollerTask$1(BotSession.java:103) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+Caused by: java.net.SocketTimeoutException: timeout
+	at okhttp3.internal.http2.Http2Stream$StreamTimeout.newTimeoutException(Http2Stream.kt:675) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http2.Http2Stream$StreamTimeout.exitAndThrowIfTimedOut(Http2Stream.kt:684) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:143) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:97) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:110) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:93) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar!/:na]
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154) ~[okhttp-4.12.0.jar!/:na]
+	at org.telegram.telegrambots.longpolling.BotSession.getUpdatesFromTelegram(BotSession.java:139) ~[telegrambots-longpolling-7.4.2.jar!/:na]
+	... 7 common frames omitted
+
+2024-11-04T11:17:07.684+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- REQUEST  --------------
+POST https://oauth2.googleapis.com/token
+Accept-Encoding: gzip
+User-Agent: Google-HTTP-Java-Client/1.39.2 (gzip)
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Content-Length: 775
+
+2024-11-04T11:17:07.685+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'User-Agent: Google-HTTP-Java-Client/1.39.2 (gzip)' -H 'Content-Type: application/x-www-form-urlencoded; charset=UTF-8' -d '@-' -- 'https://oauth2.googleapis.com/token' << $$$
+2024-11-04T11:17:07.717+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 775 bytes
+2024-11-04T11:17:07.717+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI1NiIsImtpZCI6IjgzZjlmZDE0Yjk2ZTVmMjk2NWQyODdjNDU3NmVjNTE0NjEzMzU1OWQiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJodHRwczovL29hdXRoMi5nb29nbGVhcGlzLmNvbS90b2tlbiIsImV4cCI6MTczMDcxOTAyNywiaWF0IjoxNzMwNzE1NDI3LCJpc3MiOiJ0ZWxlZ3JhbWJvdGFwaUBib3QtdmVydS5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInNjb3BlIjoiaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zcHJlYWRzaGVldHMifQ.V9BtQSc7YVPSylar8TO5Txx3GXjrIemfHlhl1S622h_EjlW6KLIA9pOBoX_d9CQIAugM_-0o1t02W2fl1LBmV-YLkrppEo-iu4NSfNdhelyt5KiLuKOdzm-ry-oSEQTSkG2KoHHvzEaH6Dgl7EED-PmM5CfaBBOX_ZM6exdKa4AXzwQXu4UPzCpj1bOrfUmQ0RQbq7lflowo0R9smGvvKDxL2VXjbFf6cwYQED5aZxkJZ0PsvBnmsVSgE_sDJJ8HVDUP02bWVt-gSgUpWYG1xBdQoIlbT-uohZxZ1u-tBilZX8gJKjtYHT4s5d7AI9vUg3O3dhCLoKHbVkbXhTfA9w
+2024-11-04T11:17:07.740+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Cache-Control: private
+Server: scaffolding on HTTPServer2
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Date: Mon, 04 Nov 2024 10:17:07 GMT
+Content-Type: application/json; charset=UTF-8
+
+2024-11-04T11:17:07.741+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 1,083 bytes
+2024-11-04T11:17:07.741+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {"access_token":"ya29.c.c0ASRK0GZu0z8Mdl2OYj-eW7csuUdSMbcB4FSxgIuD88s-ENtSaEgSZFINBgg_7TYQuFfJdHZZdegjZe9_E4QqDY2otlSGVu-9saUdkLNvEnG410d2yUxd1HWPepMgfkSeikHl8_O7z6ZJFEgLgl803HaVLLEqnAz4v9SdysgYlz5ATzFSLVhyITRMKLlYeVZQ5mvYxIyqhhkHDfH_BFMe8xqIb-SeU7J7reuwCKD1MPNz_xljX9TNzaGXUSkIBXNIp-58rCrwLd9FNvHild_RLGu3gDhr8gQO9Pj4CNYMCx1ASt1Zd0Q_QwJE7eXNiIbyy4eNNbrza9OqbEFgW3JEOmRU-iN0LEo7mVn1LVHyJ68myzy-8iBXuxJgE385P9f6W3QX7Ww0i58dt08jJXZMFfQWn-m1uWfBmtqczsZQIUrQqV7kfUeuX2SV7-0Mkas3yXQybrhm2-leOaaSRe3_d25xgih00iaprmhe7oyeRWB0vmWe515kJBxfJUuh0VVWx3eku-5JSBtgf89cocs9qUFfRYW2rvWF9JRMVXf8ll8VzxtzvhMg-Q9bZ9uenYmS8XWohR3Whon80QXV1V-l-ah32fVOeh4ziFhRRzZRcg9k3FxYaQbeb8xuz5q7dV86W3kZzaB4W44cW_gI9R1d-vaOsIy1QUzrke6aR9Rxw-3asVfWO8tiUJObXfc-Uf3n_xh8dqIp-_g95b4M45g7uYIS_g_VB8dVq5SaXQUBgp45Y8n546rF6gz5wSyWb2I6gSZ5R4aRJOjJ-Rxt7cp3XqXvXQXoZWsugOB6ylmjb49Yh3Y3feRqiJt_nIIyVVX-Vuw4k4SnYQj01o6XV1Sj1fc83Jg-dcZinljhxQURfqdFoYIeVJRMIjMqhWS1mijlq-iejouQvzR1Jb-nsgVQUUt8aZv3OnfSqp_vbtZo94wz1e8rh5OnMhoJdnFZmX1ZhojX6hfJatg1oM1lO505k61m-bMSepQYyrByZ1F-6RkZZFcw1u5ekSw","expires_in":3599,"token_type":"Bearer"}
+2024-11-04T11:17:07.743+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- REQUEST  --------------
+POST https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED
+Accept-Encoding: gzip
+Authorization: Bearer ya29.c.c0ASRK0GZu0z8Mdl2OYj-eW7csuUdSMbcB4FSxgIuD88s-ENtSaEgSZFINBgg_7TYQuFfJdHZZdegjZe9_E4QqDY2otlSGVu-9saUdkLNvEnG410d2yUxd1HWPepMgfkSeikHl8_O7z6ZJFEgLgl803HaVLLEqnAz4v9SdysgYlz5ATzFSLVhyITRMKLlYeVZQ5mvYxIyqhhkHDfH_BFMe8xqIb-SeU7J7reuwCKD1MPNz_xljX9TNzaGXUSkIBXNIp-58rCrwLd9FNvHild_RLGu3gDhr8gQO9Pj4CNYMCx1ASt1Zd0Q_QwJE7eXNiIbyy4eNNbrza9OqbEFgW3JEOmRU-iN0LEo7mVn1LVHyJ68myzy-8iBXuxJgE385P9f6W3QX7Ww0i58dt08jJXZMFfQWn-m1uWfBmtqczsZQIUrQqV7kfUeuX2SV7-0Mkas3yXQybrhm2-leOaaSRe3_d25xgih00iaprmhe7oyeRWB0vmWe515kJBxfJUuh0VVWx3eku-5JSBtgf89cocs9qUFfRYW2rvWF9JRMVXf8ll8VzxtzvhMg-Q9bZ9uenYmS8XWohR3Whon80QXV1V-l-ah32fVOeh4ziFhRRzZRcg9k3FxYaQbeb8xuz5q7dV86W3kZzaB4W44cW_gI9R1d-vaOsIy1QUzrke6aR9Rxw-3asVfWO8tiUJObXfc-Uf3n_xh8dqIp-_g95b4M45g7uYIS_g_VB8dVq5SaXQUBgp45Y8n546rF6gz5wSyWb2I6gSZ5R4aRJOjJ-Rxt7cp3XqXvXQXoZWsugOB6ylmjb49Yh3Y3feRqiJt_nIIyVVX-Vuw4k4SnYQj01o6XV1Sj1fc83Jg-dcZinljhxQURfqdFoYIeVJRMIjMqhWS1mijlq-iejouQvzR1Jb-nsgVQUUt8aZv3OnfSqp_vbtZo94wz1e8rh5OnMhoJdnFZmX1ZhojX6hfJatg1oM1lO505k61m-bMSepQYyrByZ1F-6RkZZFcw1u5ekSw
+User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)
+x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0
+Content-Type: application/json; charset=UTF-8
+Content-Encoding: gzip
+
+2024-11-04T11:17:07.743+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : curl -v --compressed -X POST -H 'Accept-Encoding: gzip' -H 'Authorization: Bearer ya29.c.c0ASRK0GZu0z8Mdl2OYj-eW7csuUdSMbcB4FSxgIuD88s-ENtSaEgSZFINBgg_7TYQuFfJdHZZdegjZe9_E4QqDY2otlSGVu-9saUdkLNvEnG410d2yUxd1HWPepMgfkSeikHl8_O7z6ZJFEgLgl803HaVLLEqnAz4v9SdysgYlz5ATzFSLVhyITRMKLlYeVZQ5mvYxIyqhhkHDfH_BFMe8xqIb-SeU7J7reuwCKD1MPNz_xljX9TNzaGXUSkIBXNIp-58rCrwLd9FNvHild_RLGu3gDhr8gQO9Pj4CNYMCx1ASt1Zd0Q_QwJE7eXNiIbyy4eNNbrza9OqbEFgW3JEOmRU-iN0LEo7mVn1LVHyJ68myzy-8iBXuxJgE385P9f6W3QX7Ww0i58dt08jJXZMFfQWn-m1uWfBmtqczsZQIUrQqV7kfUeuX2SV7-0Mkas3yXQybrhm2-leOaaSRe3_d25xgih00iaprmhe7oyeRWB0vmWe515kJBxfJUuh0VVWx3eku-5JSBtgf89cocs9qUFfRYW2rvWF9JRMVXf8ll8VzxtzvhMg-Q9bZ9uenYmS8XWohR3Whon80QXV1V-l-ah32fVOeh4ziFhRRzZRcg9k3FxYaQbeb8xuz5q7dV86W3kZzaB4W44cW_gI9R1d-vaOsIy1QUzrke6aR9Rxw-3asVfWO8tiUJObXfc-Uf3n_xh8dqIp-_g95b4M45g7uYIS_g_VB8dVq5SaXQUBgp45Y8n546rF6gz5wSyWb2I6gSZ5R4aRJOjJ-Rxt7cp3XqXvXQXoZWsugOB6ylmjb49Yh3Y3feRqiJt_nIIyVVX-Vuw4k4SnYQj01o6XV1Sj1fc83Jg-dcZinljhxQURfqdFoYIeVJRMIjMqhWS1mijlq-iejouQvzR1Jb-nsgVQUUt8aZv3OnfSqp_vbtZo94wz1e8rh5OnMhoJdnFZmX1ZhojX6hfJatg1oM1lO505k61m-bMSepQYyrByZ1F-6RkZZFcw1u5ekSw' -H 'User-Agent: Telegram Bot for RDA Problem Management Google-API-Java-Client/1.32.1 Google-HTTP-Java-Client/1.39.2 (gzip)' -H 'x-goog-api-client: gl-java/17.0.12 gdcl/1.32.1 linux/6.8.0' -H 'Content-Type: application/json; charset=UTF-8' -H 'Content-Encoding: gzip' -d '@-' -- 'https://sheets.googleapis.com/v4/spreadsheets/1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME/values/%D0%90%D1%80%D0%BA%D1%83%D1%881:append?insertDataOption=INSERT_ROWS&valueInputOption=USER_ENTERED' << $$$
+2024-11-04T11:17:07.774+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 197 bytes
+2024-11-04T11:17:07.774+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {"values":[["2024-11-04 11:17:07","Львівська РДА","Знак юр","0932020563","Ось така проблема","Ресурси","4","Щотижня","Ось так вирішив"]]}
+2024-11-04T11:17:08.522+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : -------------- RESPONSE --------------
+HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Server: ESF
+X-Content-Type-Options: nosniff
+Date: Mon, 04 Nov 2024 10:17:08 GMT
+x-l2-request-path: l2-managed-6
+X-Frame-Options: SAMEORIGIN
+Cache-Control: private
+Content-Encoding: gzip
+Vary: Referer
+Vary: X-Origin
+Vary: Origin
+X-XSS-Protection: 0
+Content-Type: application/json; charset=UTF-8
+
+2024-11-04T11:17:08.523+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : Total: 313 bytes
+2024-11-04T11:17:08.523+01:00  INFO 10586 --- [RDATelegramBot] [pool-2-thread-1] c.google.api.client.http.HttpTransport   : {
+  "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+  "tableRange": "'Аркуш1'!A1:I12",
+  "updates": {
+    "spreadsheetId": "1MhxCS4cEHEcUoLxYW-65pyt5dBEkYGraVBS-uIz2AME",
+    "updatedRange": "'Аркуш1'!A13:I13",
+    "updatedRows": 1,
+    "updatedColumns": 9,
+    "updatedCells": 9
+  }
+}
+
+Data added to Google Sheets: [[2024-11-04 11:17:07, Львівська РДА, Знак юр, 0932020563, Ось така проблема, Ресурси, 4, Щотижня, Ось так вирішив]]
