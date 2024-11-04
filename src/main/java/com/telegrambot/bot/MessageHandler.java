@@ -79,6 +79,7 @@ public class MessageHandler {
         return ReplyKeyboardMarkup.builder()
                 .keyboard(keyboardRows)
                 .resizeKeyboard(true)
+                .oneTimeKeyboard(true)
                 .build();
     }
     private void processUserInput(Long chatId, String userInput) {
@@ -120,6 +121,7 @@ public class MessageHandler {
                 if (validateRDA(userInput)) {
                     user.setRda(userInput);
                     userStates.put(chatId, UserState.ENTER_PROBLEM_DESCRIPTION);
+
                     sendResponse(chatId, "Яка була проблема?");
                 } else {
                     sendResponse(chatId, "Будь ласка, виберіть вашу РДА з наданого списку.");
@@ -130,21 +132,11 @@ public class MessageHandler {
             case ENTER_PROBLEM_DESCRIPTION:
                 if (userInput.length() >= 5 && userInput.length() <= 700) {
                     problemRda.setProblemDescription(userInput);
-                    problems.add(problemRda); // Додаємо проблему в список
-                    userStates.put(chatId, UserState.ENTER_RESOURCES);
-                    sendResponse(chatId, "Вкажіть необхідні ресурси:");
-                } else {
-                    sendResponse(chatId, "Опис проблеми має містити від 5 до 700 символів.");
-                }
-                break;
-
-            case ENTER_RESOURCES:
-                if (userInput.length() >= 5 && userInput.length() <= 700) {
-                    problemRda.setResourcesNeeded(userInput);
+                    problems.add(problemRda);
                     userStates.put(chatId, UserState.ENTER_SCALE);
                     sendResponse(chatId, "Оцініть масштаб проблеми від 1 до 5:");
                 } else {
-                    sendResponse(chatId, "Необхідні ресурси мають містити від 5 до 700 символів.");
+                    sendResponse(chatId, "Опис проблеми має містити від 5 до 700 символів.");
                 }
                 break;
 
@@ -168,20 +160,31 @@ public class MessageHandler {
                 }
                 break;
 
+
             case ENTER_SOLUTION:
                 if (userInput.length() >= 5 && userInput.length() <= 700) {
                     problemRda.setSolution(userInput);
+                    userStates.put(chatId, UserState.ENTER_RESOURCES);
+                    sendResponse(chatId, "Які ресурси були необхідні для її вирішення?");
+                } else {
+                    sendResponse(chatId, "Опис рішення має містити від 5 до 700 символів.");
+                }
+                break;
+
+            case ENTER_RESOURCES:
+                if (userInput.length() >= 5 && userInput.length() <= 700) {
+                    problemRda.setResourcesNeeded(userInput);
                     userStates.put(chatId, UserState.CONFIRM_PROBLEM);
                     sendProblemSummary(chatId, user, problemRda);
                 } else {
-                    sendResponse(chatId, "Опис рішення має містити від 5 до 700 символів.");
+                    sendResponse(chatId, "Необхідні ресурси мають містити від 5 до 700 символів.");
                 }
                 break;
 
             case CONFIRM_PROBLEM:
                 if ("Підтвердити".equalsIgnoreCase(userInput)) {
                     completeRegistration(chatId, user, problems);
-                } else if ("Додати ще одну проблему".equalsIgnoreCase(userInput)) {
+                } else if ("Повідомити про ще одну проблему".equalsIgnoreCase(userInput)) {
                     userStates.put(chatId, UserState.ENTER_PROBLEM_DESCRIPTION);
                     sendResponse(chatId, "Опишіть наступну проблему:");
                 } else {
@@ -253,6 +256,7 @@ public class MessageHandler {
         return ReplyKeyboardMarkup.builder()
                 .keyboard(keyboardRows)
                 .resizeKeyboard(true)
+                .oneTimeKeyboard(true)
                 .build();
     }
 
@@ -272,14 +276,14 @@ public class MessageHandler {
     private void sendConfirmationOptions(Long chatId) {
         ReplyKeyboardMarkup keyboardMarkup = ReplyKeyboardMarkup.builder()
                 .keyboard(List.of(
-                        new KeyboardRow(List.of(new KeyboardButton("Підтвердити"))),
-                        new KeyboardRow(List.of(new KeyboardButton("Додати ще одну проблему")))
+                        new KeyboardRow(List.of(new KeyboardButton("Підтвердити"), new KeyboardButton("Редагувати"))),
+                        new KeyboardRow(List.of(new KeyboardButton("Повідомити про ще одну проблему"), new KeyboardButton("Завершити")))
                 ))
                 .resizeKeyboard(true)
                 .oneTimeKeyboard(true)
                 .build();
 
-        sendResponse(chatId, "Будь ласка, підтвердіть проблему або виберіть опцію додати ще одну", keyboardMarkup);
+        sendResponse(chatId, "Будь ласка, підтвердіть або виберіть іншу опцію.", keyboardMarkup);
     }
 
     private void sendResponse(long chatId, String text, ReplyKeyboardMarkup keyboardMarkup) {
@@ -311,7 +315,6 @@ public class MessageHandler {
         } catch (IOException | GeneralSecurityException e) {
             sendResponse(chatId, "Сталася помилка при збереженні даних. Спробуйте пізніше.");
             e.printStackTrace();
-            return;
         }
     }
     // Logging Methods
