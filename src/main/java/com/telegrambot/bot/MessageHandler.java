@@ -176,20 +176,130 @@ public class MessageHandler {
                     problemRda.setResourcesNeeded(userInput);
                     userStates.put(chatId, UserState.CONFIRM_PROBLEM);
                     sendProblemSummary(chatId, user, problemRda);
+                    sendInitialConfirmationOptions(chatId);
                 } else {
                     sendResponse(chatId, "Необхідні ресурси мають містити від 5 до 700 символів.");
                 }
                 break;
 
             case CONFIRM_PROBLEM:
-                if ("Підтвердити".equalsIgnoreCase(userInput)) {
-                    completeRegistration(chatId, user, problems);
+                if ("Редагувати".equalsIgnoreCase(userInput)) {
+                    sendEditOptions(chatId); // Показуємо меню вибору поля для редагування
+                    userStates.put(chatId, UserState.EDIT_PROBLEM);
+                } else if ("Підтвердити".equalsIgnoreCase(userInput)) {
+                    sendFinalOptions(chatId); // Показуємо опції завершення або додавання нової проблеми
                 } else if ("Повідомити про ще одну проблему".equalsIgnoreCase(userInput)) {
                     userStates.put(chatId, UserState.ENTER_PROBLEM_DESCRIPTION);
                     sendResponse(chatId, "Опишіть наступну проблему:");
+                } else if ("Завершити".equalsIgnoreCase(userInput)) {
+                    completeRegistration(chatId, user, problems); // Завершення реєстрації та збереження даних
+                    userStates.remove(chatId); // Видаляємо стан користувача, оскільки процес завершено
                 } else {
-                    sendConfirmationOptions(chatId);
+                    sendInitialConfirmationOptions(chatId); // Показуємо опції підтвердження та редагування
                 }
+                break;
+
+            case EDIT_PROBLEM:
+                sendProblemSummary(chatId, user, problemRda);
+                handleEditSelection(chatId, userInput, problemRda);
+                break;
+
+            case EDIT_PROBLEM_DESCRIPTION:
+                problemRda.setProblemDescription(userInput);
+                sendResponse(chatId, "Опис проблеми успішно оновлено.");
+                userStates.put(chatId, UserState.CONFIRM_PROBLEM);
+                sendProblemSummary(chatId, user, problemRda);
+                sendInitialConfirmationOptions(chatId);
+                break;
+
+            case EDIT_RESOURCES:
+                problemRda.setResourcesNeeded(userInput);
+                sendResponse(chatId, "Необхідні ресурси успішно оновлено.");
+                userStates.put(chatId, UserState.CONFIRM_PROBLEM);
+                sendProblemSummary(chatId, user, problemRda);
+                sendInitialConfirmationOptions(chatId);
+                break;
+
+            case EDIT_SCALE:
+                if (isNumeric(userInput) && Integer.parseInt(userInput) >= 1 && Integer.parseInt(userInput) <= 5) {
+                    problemRda.setScale(Integer.parseInt(userInput));
+                    sendResponse(chatId, "Масштаб проблеми успішно оновлено.");
+                } else {
+                    sendResponse(chatId, "Масштаб проблеми повинен бути числом від 1 до 5.");
+                    return;
+                }
+                userStates.put(chatId, UserState.CONFIRM_PROBLEM);
+                sendProblemSummary(chatId, user, problemRda);
+                sendInitialConfirmationOptions(chatId);
+                break;
+
+            case EDIT_FREQUENCY:
+                if (validateFrequency(userInput)) {
+                    problemRda.setFrequency(userInput);
+                    sendResponse(chatId, "Частота успішно оновлена.");
+                } else {
+                    sendFrequencySelection(chatId);
+                    return;
+                }
+                userStates.put(chatId, UserState.CONFIRM_PROBLEM);
+                sendProblemSummary(chatId, user, problemRda);
+                sendInitialConfirmationOptions(chatId);
+                break;
+
+            case EDIT_SOLUTION:
+                problemRda.setSolution(userInput);
+                sendResponse(chatId, "Опис рішення успішно оновлено.");
+                userStates.put(chatId, UserState.CONFIRM_PROBLEM);
+                sendProblemSummary(chatId, user, problemRda);
+                sendInitialConfirmationOptions(chatId);
+                break;
+        }
+    }
+    private void sendEditOptions(Long chatId) {
+        ReplyKeyboardMarkup keyboardMarkup = ReplyKeyboardMarkup.builder()
+                .keyboard(List.of(
+                        new KeyboardRow(List.of(new KeyboardButton("Опис проблеми"), new KeyboardButton("Ресурси"))),
+                        new KeyboardRow(List.of(new KeyboardButton("Масштаб"), new KeyboardButton("Частота"))),
+                        new KeyboardRow(List.of(new KeyboardButton("Рішення")))
+                ))
+                .resizeKeyboard(true)
+                .oneTimeKeyboard(true)
+                .build();
+
+        sendResponse(chatId, "Виберіть поле для редагування:", keyboardMarkup);
+    }
+
+    // Метод для обробки вибору поля, яке потрібно редагувати
+    private void handleEditSelection(Long chatId, String userInput, ProblemRda problemRda) {
+        switch (userInput) {
+            case "Опис проблеми":
+                userStates.put(chatId, UserState.EDIT_PROBLEM_DESCRIPTION);
+                sendResponse(chatId, "Введіть новий опис проблеми:");
+                break;
+
+            case "Ресурси":
+                userStates.put(chatId, UserState.EDIT_RESOURCES);
+                sendResponse(chatId, "Введіть нові ресурси для вирішення проблеми:");
+                break;
+
+            case "Масштаб":
+                userStates.put(chatId, UserState.EDIT_SCALE);
+                sendResponse(chatId, "Введіть новий масштаб проблеми від 1 до 5:");
+                break;
+
+            case "Частота":
+                userStates.put(chatId, UserState.EDIT_FREQUENCY);
+                sendFrequencySelection(chatId);
+                break;
+
+            case "Рішення":
+                userStates.put(chatId, UserState.EDIT_SOLUTION);
+                sendResponse(chatId, "Введіть новий опис рішення:");
+                break;
+
+            default:
+                sendResponse(chatId, "Невірний вибір. Будь ласка, спробуйте ще раз.");
+                sendEditOptions(chatId);
                 break;
         }
     }
@@ -270,20 +380,31 @@ public class MessageHandler {
                 problemRda.getSolution()
         );
         sendResponse(chatId, summary);
-        sendConfirmationOptions(chatId);
     }
 
-    private void sendConfirmationOptions(Long chatId) {
+    private void sendInitialConfirmationOptions(Long chatId) {
         ReplyKeyboardMarkup keyboardMarkup = ReplyKeyboardMarkup.builder()
                 .keyboard(List.of(
-                        new KeyboardRow(List.of(new KeyboardButton("Підтвердити"), new KeyboardButton("Редагувати"))),
-                        new KeyboardRow(List.of(new KeyboardButton("Повідомити про ще одну проблему"), new KeyboardButton("Завершити")))
+                        new KeyboardRow(List.of(new KeyboardButton("Підтвердити"), new KeyboardButton("Редагувати")))
                 ))
                 .resizeKeyboard(true)
                 .oneTimeKeyboard(true)
                 .build();
 
         sendResponse(chatId, "Будь ласка, підтвердіть або виберіть іншу опцію.", keyboardMarkup);
+    }
+
+    // Другий метод для відображення кнопок "Повідомити про ще одну проблему" і "Завершити"
+    private void sendFinalOptions(Long chatId) {
+        ReplyKeyboardMarkup keyboardMarkup = ReplyKeyboardMarkup.builder()
+                .keyboard(List.of(
+                        new KeyboardRow(List.of(new KeyboardButton("Повідомити про ще одну проблему"), new KeyboardButton("Завершити")))
+                ))
+                .resizeKeyboard(true)
+                .oneTimeKeyboard(true)
+                .build();
+
+        sendResponse(chatId, "Виберіть подальшу дію.", keyboardMarkup);
     }
 
     private void sendResponse(long chatId, String text, ReplyKeyboardMarkup keyboardMarkup) {
