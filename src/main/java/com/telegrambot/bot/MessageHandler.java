@@ -188,10 +188,10 @@ public class MessageHandler {
                     userStates.put(chatId, UserState.EDIT_PROBLEM);
                 } else if ("Підтвердити".equalsIgnoreCase(userInput)) {
                     sendFinalOptions(chatId); // Показуємо опції завершення або додавання нової проблеми
-                } else if ("Повідомити про ще одну проблему".equalsIgnoreCase(userInput)) {
+                } else if ("Так".equalsIgnoreCase(userInput)) {
                     userStates.put(chatId, UserState.ENTER_PROBLEM_DESCRIPTION);
                     sendResponse(chatId, "Опишіть наступну проблему:");
-                } else if ("Завершити".equalsIgnoreCase(userInput)) {
+                } else if ("Ні/Завершити".equalsIgnoreCase(userInput)) {
                     completeRegistration(chatId, user, problems); // Завершення реєстрації та збереження даних
                     userStates.remove(chatId); // Видаляємо стан користувача, оскільки процес завершено
                 } else {
